@@ -62,12 +62,6 @@ def get_split(dataset):
     return {'index': b_index, 'value': b_value, 'groups': b_groups}
 
 
-
-
-
-
-
-
 def gini_index(groups, classes):
     #count all samples at the split point
     n_instances = float(sum([len(group) for group in groups]))
@@ -86,10 +80,6 @@ def gini_index(groups, classes):
         gini += (1.0 - score) * (size / n_instances)
     return gini
     
-    
-
-
-
 
 def to_terminal(group):
     classes = [row[-1] for row in group]
